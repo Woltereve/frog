@@ -7,9 +7,8 @@
   </head>
   <body>
     <header>
-      <div class="header-logo">
-        <img class="froggy" src="./image/froggy.jpg" alt="" />
-      </div>
+      <img class="froggy" src="./image/frog_cage.png" alt="" />
+      <!-- j'ai pris le cadre pas l'image -->
     </header>
 
     <main>
@@ -34,30 +33,60 @@
           et/ou de votre application.
         </p>
 
-        <img class="frog" src="./image/frog-icone.svg" alt="" />
-        <img class="patte" src="./image/frog-patte.svg" alt="" />
-
-        <!-- iconify-->
         <form method="POST" action="connect.php">
-          <label for="nom">Nom*</label>
+          <!-- iconify-->
+
+          <ul class="segmented">
+            <li class="segmented-control__item">
+              <input
+                class="segmented-control__input"
+                type="radio"
+                value="1"
+                name="option"
+                id="option-1"
+                checked
+              />
+              <label class="segmented-control__label" for="option-1"
+                ><img
+                  class="frog"
+                  src="./image/frog-icone.svg"
+                  alt=""
+                />"</label
+              >
+            </li>
+            <li class="segmented-control__item">
+              <input
+                class="segmented-control__input"
+                type="radio"
+                value="2"
+                name="option"
+                id="option-2"
+              />
+              <label class="segmented-control__label" for="option-2"
+                ><img class="patte" src="./image/frog-patte.svg" alt="" />
+              </label>
+            </li>
+          </ul>
+
+          <label for="nom">Nom</label>
           <input id="nom" name="nom" required />
 
-          <label for="prenom">Prénom*</label>
+          <label for="prenom">Prénom</label>
           <input id="prenom" name="prenom" required />
 
-          <label for="telephone">Numéro de téléphone*</label>
+          <label for="telephone">Numéro de téléphone</label>
           <input type="tel" id="telephone" name="telephone" required />
 
-          <label for="mail">Email*</label>
+          <label for="mail">Email</label>
           <input type="email" id="mail" name="mail" required />
 
-          <label for="adresse">Adresse:</label>
+          <label for="adresse">Adresse</label>
           <input id="adresse" name="adresse" />
 
-          <label for="postal">Code postal:</label>
+          <label for="postal">Code postal</label>
           <input inputmode="numeric" id="postal" name="postal" />
           <!-- source mdn -->
-          <label for="ville">Ville:</label>
+          <label for="ville">Ville</label>
           <input id="ville" name="ville" />
 
           <div>

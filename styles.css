@@ -1,25 +1,87 @@
 body {
   background-color: white;
 }
-.froggy {
-  width: 200px;
-  height: 200px;
 
-  object-fit: contain;
+.froggy {
+  width: 100%;
+  height: 100%;
 }
+
+
 .form {
   flex-direction: column;
 }
-
-.header-logo {
+header {
+  width: 1440px;
+  height: 374px;
 }
 
 .frog {
-  width: 100px;
-  height: 100px;
+  background-color: #31b713;
+  width: 10rem;
+  height: 3rem;
+  
 }
 
 .patte {
-  width: 100px;
-  height: 100px;
+  background-color: dimgrey;
+  width: 10rem;
+  height: 3rem;
+  }
+
+  /* .segmented{
+    width: 150px;
+  height: 41px;
+  border-radius: 20px;
+  } */
+
+
+  
+
+label::after {
+    content: " :";
+}
+
+label:has(+ :required)::after {
+    content: "*";
+}
+.segmented-control {
+    display: table;
+    width: 100%;
+    margin: 2em 0;
+    padding: 0;
+}
+
+.segmented-control__item {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.segmented-control__input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.segmented-control__label {
+    display: block;
+    margin: 0 -1px -1px 0; /* -1px margin removes double-thickness borders between items */
+    padding: 1em .25em;
+
+    border: 1px solid #ddd;
+
+    font: 14px/1.5 sans-serif; 
+    text-align: center;  
+
+    cursor: pointer;
+}
+
+.segmented-control__label:hover {
+    background: #fdfefc;
+}
+
+.segmented-control__input:checked + .segmented-control__label {
+    background: #eee;
+    color: #333; 
 }
