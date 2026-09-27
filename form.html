@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Maquette</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <img class="froggy" src="./image/froggy.jpg" alt="" />
+      </div>
+    </header>
+
+    <main>
+      <div class="info">
+        <h2>MFM DIGITAL</h2>
+
+        <address>
+          Rue Middelbourg 66, 1170 Watermael-Boitsfort<br />
+          <a href="tel:+3228809692"> +32 2 880 96 92 </a><br />
+          <a href="mailto:info@mfmdigital.com"> info@mfmdigital.com </a>
+        </address>
+        <!-- lien cliquable -->
+        <img class="facebook" src="./image/fb.svg" alt="" />
+        <img class="linkedin" src="./image/linkedin.svg" alt="" />
+      </div>
+
+      <div class="contact">
+        <h1>CONTACTEZ-NOUS</h1>
+        <p>
+          Notre agence vous promet une expertise personnalisée et un
+          accompagnement sur-mesure pour la réalisation de votre site internet
+          et/ou de votre application.
+        </p>
+
+        <img class="frog" src="./image/frog-icone.svg" alt="" />
+        <img class="patte" src="./image/frog-patte.svg" alt="" />
+
+        <!-- iconify-->
+        <form method="POST" action="connect.php">
+          <label for="nom">Nom*</label>
+          <input id="nom" name="nom" required />
+
+          <label for="prenom">Prénom*</label>
+          <input id="prenom" name="prenom" required />
+
+          <label for="telephone">Numéro de téléphone*</label>
+          <input type="tel" id="telephone" name="telephone" required />
+
+          <label for="mail">Email*</label>
+          <input type="email" id="mail" name="mail" required />
+
+          <label for="adresse">Adresse:</label>
+          <input id="adresse" name="adresse" />
+
+          <label for="postal">Code postal:</label>
+          <input inputmode="numeric" id="postal" name="postal" />
+          <!-- source mdn -->
+          <label for="ville">Ville:</label>
+          <input id="ville" name="ville" />
+
+          <div>
+            <input type="checkbox" id="accepter" name="accepter" required />
+            <label for="accepter">
+              J’accepte que mes données soient recueillies par une famille de
+              crapauds ou de grenouilles aux étangs d’Ixelles.
+            </label>
+          </div>
+
+          <button type="submit">envoyer</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

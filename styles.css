@@ -1,0 +1,25 @@
+body {
+  background-color: white;
+}
+.froggy {
+  width: 200px;
+  height: 200px;
+
+  object-fit: contain;
+}
+.form {
+  flex-direction: column;
+}
+
+.header-logo {
+}
+
+.frog {
+  width: 100px;
+  height: 100px;
+}
+
+.patte {
+  width: 100px;
+  height: 100px;
+}
