@@ -37,31 +37,30 @@
         <form method="POST" action="connect.php">
           <!-- iconify-->
 
-          <ul class="segmented">
-            <li class="segmented-control__item">
+          <ul class="pilule">
+            <li class="pilule__item">
               <input
-                class="segmented-control__input"
+                class="pilule__input"
                 type="radio"
-                value="1"
-                name="option"
-                id="option-1"
+                value="crapaud"
+                name="genre"
+                id="crapaud"
                 checked
               />
-              <label class="segmented-control__label" for="option-1"
-                ><img class="frog" src="./image/frog-icone.svg" alt="Crapaud" />
-              </label>
+             <label class="pilule__label" for="crapaud" 
+                ><img class="frog" src="./image/frog-icone.svg" alt="" />Crapaud></label>
             </li>
-            <li class="segmented-control__item">
+            <li class="pilule__item">
               <input
-                class="segmented-control__input"
+                class="pilule__input"
                 type="radio"
-                value="2"
-                name="option"
-                id="option-2"
+                value="grenouille"
+                name="genre"
+                id="grenouille"
               />
-              <label class="segmented-control__label" for="option-2"
-                ><img class="patte" src="./image/frog-patte.svg" alt="Grenouille" />
-              </label>
+              <label class="pilule__label" for="grenouille"
+                ><img class="patte" src="./image/frog-patte.svg" alt="" />Grenouille></label>
+             
             </li>
           </ul>
           <div class="formulaire">
@@ -87,7 +86,7 @@
             <input id="ville" name="ville" />
           </div>
           <div>
-            <input type="checkbox" id="accepter" name="accepter" required />
+            <input type="checkbox" class= "custom" id="accepter" name="accepter" required />
             <label class="light check" for="accepter">
               J’accepte que mes données soient recueillies par une famille de
               crapauds ou de grenouilles aux étangs d’Ixelles.

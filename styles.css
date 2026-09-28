@@ -1,7 +1,6 @@
 body {
   background-color: white;
   font-family: var(--font-titre);
-  
 }
 header {
   width: 100%;
@@ -16,9 +15,12 @@ main {
 .bold {
   font-weight: var(--fw-bold);
 }
+.check {
+  font-size: var(--fs-check);
+}
+
 .light {
   font-weight: var(--fw-light);
-  font-size: var(--fs-check);
 }
 
 .contact {
@@ -28,6 +30,7 @@ main {
   padding: 32px 48px 64px 48px;
   box-sizing: border-box;
   width: 100%;
+  max-width: 584px;
 }
 .froggy {
   width: 100%;
@@ -49,6 +52,9 @@ main {
   flex-direction: column;
   display: flex;
 }
+.custom {
+  accent-color: var(--color-primary);
+}
 
 label:has(+ input)::after {
   content: " :";
@@ -57,26 +63,25 @@ label:has(+ input)::after {
 label:has(+ :required)::after {
   content: "*";
 }
-.segmented-control {
+.pilule {
   display: table;
   width: 100%;
   margin: 2em 0;
   padding: 0;
 }
-
-.segmented-control__item {
+.pilule__item {
   display: table-cell;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.segmented-control__input {
+.pilule__input {
   position: absolute;
   visibility: hidden;
 }
 
-.segmented-control__label {
+.pilule__label {
   display: block;
   margin: 0 -1px -1px 0; /* -1px margin removes double-thickness borders between items */
   padding: 1em 0.25em;
@@ -89,11 +94,11 @@ label:has(+ :required)::after {
   cursor: pointer;
 }
 
-.segmented-control__label:hover {
+.pilule__label:hover {
   background: #fdfefc;
 }
 
-.segmented-control__input:checked + .segmented-control__label {
+.pilule__input:checked + .pilule__label {
   background: #eee;
   color: #333;
 }
