@@ -15,7 +15,7 @@ main {
 .bold {
   font-weight: var(--fw-bold);
 }
-.check {
+.light-check {
   font-size: var(--fs-check);
 }
 
@@ -24,7 +24,7 @@ main {
 }
 
 .contact {
-  background-color: bisque;
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0px 4px 28px 0px var(--shadow);
   padding: 32px 48px 64px 48px;
@@ -46,9 +46,19 @@ main {
   width: 1em;
   height: 1em;
 }
-.formulaire {
-  flex-direction: column;
-  display: flex;
+
+.formulaire  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;}
+
+.formulaire input{
+  border: none;
+  border-bottom: 1.5px solid #d0d0d0;
+  width: 100%;
+}
+.champ_large {
+  grid-column: span 2;
 }
 .custom {
   accent-color: var(--color-primary);
@@ -57,6 +67,19 @@ main {
 .btn {
   width: 198px;
   height: 57px;
+  background-color: var(--color-primary);
+  border-radius: 44px;
+  font-size: var(--fs-btn);
+  color: white;
+  display: block;
+  margin: auto;
+  font-weight: var(--fw-bold);
+  font-family: var(--font-titre);
+  border: 0px;
+  /* Décalage de 8px vers la droite, fidèle à la maquette (confirmé par l'équipe) */
+  transform: translateX(8px);
+  /* accessibilité */
+  text-transform: uppercase;
 }
 
 label:has(+ input)::after {
@@ -82,7 +105,6 @@ label:has(+ :required)::after {
   position: absolute;
 }
 .pilule__input:checked + .pilule__label {
-  
   color: white;
 }
 /* z-index passe le texte devant la pilule verte position: relative obligatoire */
@@ -96,27 +118,23 @@ label:has(+ :required)::after {
   align-items: center;
   gap: 9px;
   position: relative;
- z-index: 1;
+  z-index: 1;
 }
-.pilule::before{
-content: "";
-position:absolute;
-top: 0px ;
-left : 0px;
-width:150px ;
-height:41px ;
-border-radius: 20px;
-background-color: var(--color-primary);
-/* ici pour que ca glisse des 2 cotés */
-transition:  0.2s ease;
-
-
+.pilule::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 150px;
+  height: 41px;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  /* ici pour que ca glisse des 2 cotés */
+  transition: 0.2s ease;
 }
 
 .pilule:has(#grenouille:checked)::before {
-transform:  translateX(162px);
+  transform: translateX(162px);
 
-justify-content:space-between;
+  justify-content: space-between;
 }
-
-
