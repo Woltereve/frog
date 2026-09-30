@@ -107,13 +107,16 @@ width:150px ;
 height:41px ;
 border-radius: 20px;
 background-color: var(--color-primary);
+/* ici pour que ca glisse des 2 cotés */
+transition:  0.2s ease;
 
 
 }
 
 .pilule:has(#grenouille:checked)::before {
-transform:  translateX(150px);
+transform:  translateX(162px);
 
+justify-content:space-between;
 }
 
 
