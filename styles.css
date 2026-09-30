@@ -22,7 +22,20 @@ main {
 .light {
   font-weight: var(--fw-light);
 }
-
+.info address{
+font-size: normal;
+line-height: 32px
+}
+.info{
+  line-height: 32px;
+  font-size: normal;
+  }
+  .info a {
+color:inherit;
+}
+.mail{
+  text-decoration: none;
+}
 .contact {
   background-color: white;
   border-radius: 8px;
