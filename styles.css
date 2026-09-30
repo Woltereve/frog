@@ -11,7 +11,6 @@ main {
   justify-content: center;
   display: flex;
   gap: 64px;
- 
 }
 
 .bold {
@@ -24,23 +23,22 @@ main {
 .light {
   font-weight: var(--fw-light);
 }
-.info address{
-font-style: normal;
-line-height: 32px;
+.info address {
+  font-style: normal;
+  line-height: 32px;
 }
-.info{
-  line-height: 32px;padding-top: 114px;
-
-  }
-  .info a {
-color:inherit;
+.info {
+  line-height: 32px;
+  padding-top: 114px;
 }
-.info h2{
+.info a {
+  color: inherit;
+}
+.info h2 {
   margin: 0;
- margin-bottom: 24px;
-
+  margin-bottom: 24px;
 }
-.mail{
+.mail {
   text-decoration: none;
 }
 .contact {
@@ -68,54 +66,53 @@ color:inherit;
   height: 1em;
 }
 
-.formulaire  {
+.formulaire {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;}
+  gap: 48px;
+}
 
-.formulaire input{
+.formulaire input {
   border: none;
   border-bottom: 1.5px solid #d0d0d0;
   width: 100%;
   height: 24px;
 }
-.champ{
-display: flex;
-flex-direction: column;
-justify-content:center ;
-gap: 8px;
-
-
+.champ {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
 }
 .champ_large {
   grid-column: span 2;
 }
 .custom {
- appearance: none;
- /* 10 xp plus les 8 des margin et padding  */
- width: 10px;
- height: 10px;
- border: 2px solid var(--color-primary);
- border-radius: 5px ;
+  appearance: none;
+  /* 10 xp plus les 8 des margin et padding  */
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
   box-sizing: content-box;
   padding: 2px;
   margin: 0;
-  background-clip:content-box;
+  background-clip: content-box;
   flex-shrink: 0;
 }
 
 .custom:checked {
-  background-color: var(--color-primary);}
+  background-color: var(--color-primary);
+}
 
-.accord{
+.accord {
   font-weight: var(--fw-light);
-display: flex;
-gap: 16px;
-align-items: flex-start ;
-padding-top:40px;
-padding-bottom: 48px;
-  }
-  
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
 
 .btn {
   width: 198px;
@@ -145,7 +142,8 @@ label:has(+ :required)::after {
   content: "*";
 }
 .pilule {
-  width: 312px;
+  width: 100%;
+  max-width: 312px;
   height: 41px;
   display: flex;
   list-style: none;
@@ -162,15 +160,19 @@ label:has(+ :required)::after {
 .pilule__input:checked + .pilule__label {
   color: white;
 }
+.pilule__item {
+  width: 48%;
+}
 /* z-index passe le texte devant la pilule verte position: relative obligatoire */
 .pilule__label {
   font-size: var(--fs-champ);
-  width: 150px;
+  /* valeur calculé avec l ia pour que le fond gris retrecisse avec le responsive */
+  width: 100%;
   height: 41px;
   border-radius: 20px;
   justify-content: center;
   display: flex;
-  
+
   align-items: center;
   gap: 9px;
   position: relative;
@@ -181,7 +183,7 @@ label:has(+ :required)::after {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 150px;
+  width: 48%;
   height: 41px;
   border-radius: 999px;
   background-color: var(--color-primary);
@@ -190,5 +192,26 @@ label:has(+ :required)::after {
 }
 
 .pilule:has(#grenouille:checked)::before {
-  transform: translateX(162px);
+ left: 52%;
+}
+@media (max-width: 768px) {
+  :root {
+    --fs-titre: 20px;
+    --fs-check:10px;
+    --fs-champ:12px;
+    --fs-btn:20px;
+    
+  }
+  main {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .info{
+    padding-top: 30px;
+  }
+  .contact {
+  margin-top: 0px;
+  padding: 24px;
+}
+
 }
