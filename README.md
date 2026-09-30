@@ -20,3 +20,5 @@ Sources
 
 -icone de grenouille : iconify
 - Autre icônes :icon_icons
+- lien vers travail fini
+- https://woltereve.github.io/frog/
