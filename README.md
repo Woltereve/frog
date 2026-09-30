@@ -18,5 +18,5 @@ pour m'amener à trouver et corriger mes erreurs moi-même.
 
 Sources
 
-- Photo de grenouille : iconify
-- Icônes :icon_icons
+-icone de grenouille : iconify
+- Autre icônes :icon_icons
