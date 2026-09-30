@@ -10,6 +10,8 @@ header {
 main {
   justify-content: center;
   display: flex;
+  gap: 64px;
+ 
 }
 
 .bold {
@@ -27,11 +29,16 @@ font-style: normal;
 line-height: 32px;
 }
 .info{
-  line-height: 32px;
+  line-height: 32px;padding-top: 114px;
 
   }
   .info a {
 color:inherit;
+}
+.info h2{
+  margin: 0;
+ margin-bottom: 24px;
+
 }
 .mail{
   text-decoration: none;
@@ -85,24 +92,37 @@ gap: 8px;
 }
 .custom {
  appearance: none;
- width: 18px;
- height: 18px;
+ /* 10 xp plus les 8 des margin et padding  */
+ width: 10px;
+ height: 10px;
  border: 2px solid var(--color-primary);
  border-radius: 5px ;
-  box-sizing: border-box;
+  box-sizing: content-box;
   padding: 2px;
+  margin: 0;
   background-clip:content-box;
+  flex-shrink: 0;
 }
 
 .custom:checked {
   background-color: var(--color-primary);}
+
+.accord{
+  font-weight: var(--fw-light);
+display: flex;
+gap: 16px;
+align-items: flex-start ;
+padding-top:40px;
+padding-bottom: 48px;
+  }
   
 
 .btn {
   width: 198px;
   height: 57px;
   background-color: var(--color-primary);
-  border-radius: 44px;
+  /*une pilule parfaite car ne peut pas diviser plus que sa moitié */
+  border-radius: 999px;
   font-size: var(--fs-btn);
   color: white;
   display: block;
@@ -132,7 +152,7 @@ label:has(+ :required)::after {
   padding: 0px;
   position: relative;
   background-color: var(--unchecked);
-  border-radius: 20px;
+  border-radius: 999px;
   justify-content: space-between;
 }
 .pilule__input {
@@ -163,7 +183,7 @@ label:has(+ :required)::after {
   left: 0px;
   width: 150px;
   height: 41px;
-  border-radius: 20px;
+  border-radius: 999px;
   background-color: var(--color-primary);
   /* ici pour que ca glisse des 2 cotés */
   transition: 0.2s ease;
