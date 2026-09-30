@@ -32,21 +32,21 @@ main {
   width: 100%;
   max-width: 584px;
 }
-.froggy {
+.image {
   width: 100%;
   height: 100%;
 }
 
 .frog {
-  background-color: var(--color-primary);
-  width: 10rem;
-  height: 3rem;
+  width: 1em;
+  height: 1em;
+ 
 }
-
+/* em pour s'adapter au texte */
 .patte {
-  background-color: dimgrey;
-  width: 10rem;
-  height: 3rem;
+  width: 1em;
+  height: 1em;
+  
 }
 .formulaire {
   flex-direction: column;
@@ -63,47 +63,43 @@ label:has(+ input)::after {
 label:has(+ :required)::after {
   content: "*";
 }
-.pilule {
-  display: table;
-  width: 100%;
-  margin: 2em 0;
-  padding: 0;
+.pilule{
+
+width:312px ;
+height:41px ;
+display: flex;
+list-style: none;
+padding:0px
+
+
 }
-.pilule__item {
-  display: table-cell;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.pilule__input {
-  position: absolute;
-  visibility: hidden;
-}
-
-.pilule__label {
-  display: block;
-  margin: 0 -1px -1px 0; /* -1px margin removes double-thickness borders between items */
-  padding: 1em 0.25em;
-
-  border: 1px solid #ddd;
-
-  font: 14px/1.5 sans-serif;
-  text-align: center;
-
-  cursor: pointer;
-}
-
-.pilule__label:hover {
-  background: #fdfefc;
-}
-
-.pilule__input:checked + .pilule__label {
-  background: #eee;
-  color: #333;
-}
-
 .btn {
   width: 198px;
   height: 57px;
 }
+.pilule__input{
+  opacity: 0; 
+  position: absolute;
+}
+.pilule__input:checked + .pilule__label{
+  background-color:var(--color-primary);
+  color: white;
+  
+  
+}
+.pilule__input + .pilule__label{
+  background: var( --unchecked);
+  font-size: var(--fs-champ);
+  
+
+}
+.pilule__label{
+  width:150px ;
+  height:41px ;
+  border-radius:20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+
